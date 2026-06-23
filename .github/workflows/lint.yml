@@ -11,6 +11,11 @@ jobs:
       - name: clone the code
         uses: actions/checkout@v7
 
+      - name: install python
+        uses: actions/setup-python@v6
+        with:
+          python-version: '3.10'
+
       - name: install linter
         run: pip install ruff
 
