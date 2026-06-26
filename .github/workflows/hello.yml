@@ -13,3 +13,15 @@ jobs:
 
       - name: print 
         run: echo "Hello from Github Actions"
+
+      - name: print the current date and time
+        run: date
+
+      - name: Printing name of the branch that triggered the workflow
+        run: echo "branch: ${{ github.ref }}"
+
+      - name: List files in repo
+        run: ls -la
+
+      - name: runner's OS
+        run: echo "runner's OS : ${{ runner.os }}"
