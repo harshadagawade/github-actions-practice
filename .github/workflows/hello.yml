@@ -1,0 +1,16 @@
+name: hello
+
+on:
+  push:
+    branches: [master]
+
+jobs:
+  name: greet
+    runs-on: ubuntu:latest
+    steps:
+      - name: checkout the code
+        uses: actions/checkout@v7
+
+      - name: print 
+        run: echo "Hello from Github Actions"
+         
