@@ -18,7 +18,7 @@ jobs:
         run: date
 
       - name: Printing name of the branch that triggered the workflow
-        run: echo "branch: ${{ github.ref }}"
+        run: echo "branch: ${{ github.ref_name }}"
 
       - name: List files in repo
         run: ls -la
