@@ -2,7 +2,7 @@ name: hello
 
 on:
   push:
-    branches: [master]
+    branches: [main]
 
 jobs:
   name: greet
@@ -13,4 +13,3 @@ jobs:
 
       - name: print 
         run: echo "Hello from Github Actions"
-         
