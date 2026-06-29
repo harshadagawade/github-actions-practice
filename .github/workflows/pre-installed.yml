@@ -1,0 +1,14 @@
+name: pre-installed tools
+
+on:
+  workflow_dispatch:
+
+jobs:
+  pre-installed:
+    strategy:
+      matrix:
+        tools-version: [docker,python,node,git]
+    runs-on: ubuntu-latest
+    steps:
+      - name: display tools version
+        run: ${{ matrix.tools-version }} --version  
