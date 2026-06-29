@@ -1,0 +1,16 @@
+name: self-hosted runner
+
+on:
+  workflow_dispatch:
+
+jobs:
+  self-hosted:
+    runs-on: self-hosted
+    steps:
+      - name: self-hosted runner info
+        run: |
+          echo "hostname is:"
+          hostname
+          echo "working directory:"
+          pwd  
+          touch abc
