@@ -1,0 +1,15 @@
+name: schedule request
+
+on:
+  schedule:
+    - cron: '20 2 * * *'
+
+jobs:
+  schedule:
+    runs-on: ubuntu-latest
+    steps:
+      - name: print date
+        run: date
+
+      - name: CPU usage      
+        run: ps -aux | grep -i "cpu"
