@@ -21,6 +21,6 @@ jobs:
         run: echo "Current user :" ${{ github.actor }}
       
       - name: The current runner user running the job
-        run: $(whoami)
+        run: whoami
 
 
