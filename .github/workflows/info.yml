@@ -15,14 +15,12 @@ jobs:
         run: echo "runners OS :" ${{ matrix.os }} 
 
       - name: Runners Hostname
-        run: |
-          echo "Hostname :" 
-          hostname
-          
+        run: hostname
+
       - name: The current github user running the job
         run: echo "Current user :" ${{ github.actor }}
       
       - name: The current runner user running the job
-        run: echo "Current runner user:" $(whoami)
+        run: $(whoami)
 
 
