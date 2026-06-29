@@ -1,0 +1,23 @@
+name: github-hosted runners
+
+on:
+  workflow_dispatch:
+
+jobs:
+  info:
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest]
+    runs-on: ${{ matrix.os }}
+
+    steps:
+      - name: print os name
+        run: echo "runner's OS :" ${{ matrix.os }} 
+
+      - name: runner's hostname
+        run: echo "runner's hostname:" ${{ hostname }}
+
+      - name: current user running the jobs
+        run:  ${{ whoami }}
+
+
