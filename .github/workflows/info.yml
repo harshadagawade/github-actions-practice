@@ -15,9 +15,9 @@ jobs:
         run: echo "runner's OS :" ${{ matrix.os }} 
 
       - name: runner's hostname
-        run: echo "runner's hostname:" ${{ get-hostname }}
+        run: echo "runner's hostname:" $(hostname) 
 
       - name: current user running the jobs
-        run:  ${{ whoami }}
+        run:  $(whoami)
 
 
