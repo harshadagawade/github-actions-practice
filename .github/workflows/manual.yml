@@ -1,0 +1,20 @@
+name: manual-triger
+
+on:
+  workflow_dispatch:
+    inputs:
+      enviornment:
+        description: Environment passed from workflow_dispatch
+        required: true
+        default: 'staging'
+        type: choice
+        options:
+          - 'production'
+          - 'staging'
+
+jobs:
+  manual:
+    runs-on: ubuntu-latest
+    steps:
+      - name: running environment
+        run: echo "The selected environment is:" ${{ inputs.environment }}  
