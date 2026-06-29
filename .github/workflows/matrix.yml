@@ -1,9 +1,9 @@
-name: matrix strategy
+name: matrix strategy yml
 
 on:
   push:
     branches : [main]
-    paths: matrix.yml
+  #  paths: matrix.yml
 
 jobs:
   matrix:    
@@ -20,4 +20,4 @@ jobs:
         python-version: ${{ matrix.python-version }}
 
     - name: print python version
-      run: python --version    
+      run: python --version
