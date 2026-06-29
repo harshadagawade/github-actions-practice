@@ -12,7 +12,7 @@ jobs:
 
     steps:
       - name: print os name
-        run: echo "runner's OS :" ${{ matrix.os }} 
+        run: echo "runners OS :" ${{ matrix.os }} 
 
       - name: runner's hostname
         run: echo "runner's hostname:" $(hostname) 
