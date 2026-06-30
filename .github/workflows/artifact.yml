@@ -1,0 +1,18 @@
+name: upload artifact
+
+on:
+  workflow_dispatch:
+
+jobs:
+  artifact:
+    runs-on: ubuntu-latest
+    steps:
+      - name: generate a files
+        run: echo "added test results" >> /home/ubuntu/result.txt
+
+      - name: upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: result.txt
+          path: /home/ubuntu/result.txt
+
