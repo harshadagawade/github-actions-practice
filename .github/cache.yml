@@ -1,0 +1,21 @@
+name: cache
+
+on:
+  workflow_dispatch:
+
+jobs:
+  cache:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout the code
+        uses: actions/Checkout@v7
+
+      - name: cache depedencies
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/pip
+          key: pip-${{ hashFiles('requirements.txt')}}
+          restore-keys: pip-
+          
+      - name: Install Python Dependencies
+        run: pip install -r requirements.txt    
