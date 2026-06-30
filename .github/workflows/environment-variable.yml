@@ -15,6 +15,6 @@ jobs:
        run: |
         echo "$APP_NAME is in $ENVIRONMENT and version is $VERSION"
         echo "actor is" ${{ github.actor }}
-        eccho "commit sha: " ${{ githubc.sha }}
+        eccho "commit sha: " ${{ github.sha }}
        env:
          VERSION: 1.0.0
