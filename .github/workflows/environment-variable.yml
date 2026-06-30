@@ -1,0 +1,16 @@
+name: Environment-variables
+
+on:
+  workflow_dispatch:
+  env: 
+    APP_NAME: myapp
+
+jobs:
+  runs-on: ubuntu-latest
+  env: 
+    ENVIRONMENT: staging
+  steps:
+    - name: print all variables
+      run: echo "$APP_NAME is in $ENVIRONMENT and version is $VERSION"
+      env:
+        VERSION: 1.0.0
